@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="kerem_küçük_ödev.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Label x:Name="OperationLabel" 
+               Text="" 
+               FontSize="18" 
+               TextColor="Gray" 
+               HorizontalOptions="Center" />
+            <Entry
+                HorizontalOptions="Center"
+                x:Name="NumberEntry"
+                WidthRequest="200"
+                Margin="8,0"
+                FontSize="12"
+                Placeholder="sayı gir"                               
+                />
+
+            <HorizontalStackLayout
+                Padding="30,0"
+                Spacing="25"
+                HorizontalOptions="Center">
+                <Button Text="+" Grid.Column="0" Clicked="OnOperationClicked" />
+                <Button Text="-" Grid.Column="1" Clicked="OnOperationClicked" />
+
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Padding="30,0"
+                Spacing="25"
+                HorizontalOptions="Center">
+                <Button Text="x" Grid.Column="0" Clicked="OnOperationClicked" />
+                <Button Text="/" Grid.Column="1" Clicked="OnOperationClicked" />
+
+            </HorizontalStackLayout>
+            <Button Text="=" 
+                HorizontalOptions="Center"
+                WidthRequest="100"
+                BackgroundColor="LightGray" 
+                TextColor="Black" 
+                FontSize="20" 
+                Clicked="OnEqualsClicked" />
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
